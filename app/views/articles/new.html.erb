@@ -1,4 +1,7 @@
-<h1> New Article </h1>
+<%= render 'form',
+  article: @article,
+  submit: 'Save Article',
+  cancel_path: root_path,
+  heading: 'New Article' %>
 
-<%= render 'form', article: @article, submit: 'Save Article' %>
 
