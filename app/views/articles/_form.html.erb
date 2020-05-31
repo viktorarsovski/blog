@@ -21,6 +21,7 @@
         <h1><%= heading %></h1>
       </div>
     </div>
+
     <div class="column is-6 is-offset-3">
       <%= form_with model: article, local: true do |form| %>
         <div class="field">
@@ -33,13 +34,14 @@
           <% end %>
         </div>
 
-
         <div class="field">
           <%= form.label :body, class: "label" %>
+
           <div class="control">
             <%= form.text_area :body, class: "textarea", placeholder: 'Your body' %>
           </div>
         </div>
+
         <div class="field is-grouped">
           <div class="control">
             <%= form.submit submit, class: "button is-link" %>
