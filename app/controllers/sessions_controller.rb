@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:session][:password])
       session[:user_id] = user.id
+      
 
     else
       flash.now[:danger] = 'Email and password miss match'
