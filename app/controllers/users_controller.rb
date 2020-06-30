@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-    logged_in_notice if logged_in?
+    session_notice(:warning, 'Already logged in!') if logged_in?
 
     @user = User.new
   end
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
   def show
     @user = User.find(params[:id])
   end
