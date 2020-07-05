@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    
+
     if logged_in?
       session_notice(:danger, 'Wrong User') unless equal_with_current_user?(@article.user)
     end
@@ -53,7 +53,6 @@ class ArticlesController < ApplicationController
     article = Article.find(params[:id])
 
 
-    redirect_to articles_path
     if equal_with_current_user?(article.user)
       article.destroy
       redirect_to articles_path
