@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :article do
-    article
+    user
 
-    body
+    title { 'Learning Rails' }
   end
 end
