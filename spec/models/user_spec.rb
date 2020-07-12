@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User do
   context "when saving" do
-    it "transform email to lower case" do
+    it 'transform email to lower case' do
       john = create(:user, email: 'TESTING@TEST.COM')
 
       expect(john.email).to eq 'testing@test.com'
